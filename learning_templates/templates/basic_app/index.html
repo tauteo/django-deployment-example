@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends "basic_app/base.html" %}
+    {% load my_extras %}
+    {% block body_block %}
+        <h1>Welcome to INDEX</h1>
+        <!-- FILTERS: -->
+        <!-- built in -->
+        <!-- change to uppercase -->
+        <h2>{{ text | upper }}</h2>
+        <!-- add number -->
+        <h2>{{ number | add:'99' }}</h2>
+        <!-- custom -->
+        <h2>{{ text | my_cut:' ' }}</h2>
+    {% endblock %}
